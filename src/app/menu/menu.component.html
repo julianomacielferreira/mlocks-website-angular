@@ -1,15 +1,15 @@
 <header>
-    <div class="menu-btn">
+    <div class="menu-btn" #menuBtn (click)="toogleMenu()">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
     </div>
 
-    <nav class="menu">
-        <div class="menu-branding">
+    <nav class="menu" #menu>
+        <div class="menu-branding" #menuBranding>
             <div class="portrait"></div>
         </div>
-        <ul class="menu-nav">
+        <ul class="menu-nav" #menuNav>
             <li class="nav-item current">
                 <a href="index.html" class="nav-link">
                     Home
