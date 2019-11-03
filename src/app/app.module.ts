@@ -28,13 +28,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent, NavItemDirective } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { WorkComponent } from './work/work.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    NavItemDirective
+    NavItemDirective,
+    AboutComponent,
+    FooterComponent,
+    WorkComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
