@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 import { Component, OnInit } from '@angular/core';
+import { BackgroundService } from '../background.service';
 
 @Component({
   selector: 'mlocks-home',
@@ -30,9 +31,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private backgroundImageService: BackgroundService) { }
 
   ngOnInit() {
+
+    this.backgroundImageService.setBackgroundImage();
   }
 
 }
