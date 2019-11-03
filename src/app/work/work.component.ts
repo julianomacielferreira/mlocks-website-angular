@@ -23,6 +23,7 @@
  */
 import { Component, OnInit } from '@angular/core';
 import { BackgroundService } from '../background.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'mlocks-work',
@@ -31,10 +32,14 @@ import { BackgroundService } from '../background.service';
 })
 export class WorkComponent implements OnInit {
 
-  constructor(private backgroundImageService: BackgroundService) { }
+  constructor(
+    private backgroundImageService: BackgroundService,
+    private titleService: Title
+  ) { }
 
   ngOnInit() {
 
+    this.titleService.setTitle('My Work');
     this.backgroundImageService.removeBackgroundImage();
   }
 
