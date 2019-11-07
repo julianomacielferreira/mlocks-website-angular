@@ -27,8 +27,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'mlocks-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
 

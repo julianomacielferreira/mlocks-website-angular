@@ -27,8 +27,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'mlocks-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  templateUrl: './contact.component.html'
 })
 export class ContactComponent implements OnInit {
 

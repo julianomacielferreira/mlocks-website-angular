@@ -27,8 +27,7 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'mlocks-work',
-  templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  templateUrl: './work.component.html'
 })
 export class WorkComponent implements OnInit {
 
