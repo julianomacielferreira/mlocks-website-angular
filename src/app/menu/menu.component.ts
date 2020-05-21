@@ -21,73 +21,79 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit, ViewChild, ElementRef, Renderer2, Directive, ViewChildren, QueryList } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  Directive,
+  ViewChildren,
+  QueryList,
+} from "@angular/core";
 
 /**
  * Directive created only to support ViewChildren selector by CSS class name
  */
 @Directive({
   // tslint:disable-next-line: directive-selector
-  selector: '.nav-item'
+  selector: ".nav-item",
 })
 export class NavItemDirective {
-
-  constructor() { }
+  constructor() {}
 }
 
-
 @Component({
-  selector: 'mlocks-menu',
-  templateUrl: './menu.component.html'
+  selector: "mlocks-menu",
+  templateUrl: "./menu.component.html",
 })
 export class MenuComponent implements OnInit {
-
   private showMenu: boolean;
 
-  @ViewChild('menuBtn', { static: true })
+  @ViewChild("menuBtn", { static: true })
   private menuBtn: ElementRef;
 
-  @ViewChild('menu', { static: true })
+  @ViewChild("menu", { static: true })
   private menu: ElementRef;
 
-  @ViewChild('menuNav', { static: true })
+  @ViewChild("menuNav", { static: true })
   private menuNav: ElementRef;
 
-  @ViewChild('menuBranding', { static: true })
+  @ViewChild("menuBranding", { static: true })
   private menuBranding: ElementRef;
 
   @ViewChildren(NavItemDirective, { read: ElementRef })
   private navItens: QueryList<ElementRef>;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public toogleMenu(): void {
-
-    const closeCSS = 'close';
-    const showCSS = 'show';
+    const closeCSS = "close";
+    const showCSS = "show";
 
     if (!this.showMenu) {
-
       this.renderer.addClass(this.menuBtn.nativeElement, closeCSS);
       this.renderer.addClass(this.menu.nativeElement, showCSS);
       this.renderer.addClass(this.menuNav.nativeElement, showCSS);
       this.renderer.addClass(this.menuBranding.nativeElement, showCSS);
 
-      this.navItens.forEach(item => this.renderer.addClass(item.nativeElement, showCSS));
+      this.navItens.forEach((item) =>
+        this.renderer.addClass(item.nativeElement, showCSS)
+      );
 
       // Set menu state
       this.showMenu = true;
     } else {
-
       this.renderer.removeClass(this.menuBtn.nativeElement, closeCSS);
       this.renderer.removeClass(this.menu.nativeElement, showCSS);
       this.renderer.removeClass(this.menuNav.nativeElement, showCSS);
       this.renderer.removeClass(this.menuBranding.nativeElement, showCSS);
 
-      this.navItens.forEach(item => this.renderer.removeClass(item.nativeElement, showCSS));
+      this.navItens.forEach((item) =>
+        this.renderer.removeClass(item.nativeElement, showCSS)
+      );
 
       // Set menu state
       this.showMenu = false;

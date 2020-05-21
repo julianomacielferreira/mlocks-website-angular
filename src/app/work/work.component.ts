@@ -21,25 +21,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component, OnInit } from '@angular/core';
-import { BackgroundService } from '../background.service';
-import { Title } from '@angular/platform-browser';
+import { Component, OnInit } from "@angular/core";
+import { BackgroundService } from "../background.service";
+import { Title } from "@angular/platform-browser";
 
 @Component({
-  selector: 'mlocks-work',
-  templateUrl: './work.component.html'
+  selector: "mlocks-work",
+  templateUrl: "./work.component.html",
 })
 export class WorkComponent implements OnInit {
-
   constructor(
     private backgroundImageService: BackgroundService,
     private titleService: Title
-  ) { }
+  ) {}
 
   ngOnInit() {
-
-    this.titleService.setTitle('My Work');
+    this.titleService.setTitle("My Work");
     this.backgroundImageService.removeBackgroundImage();
   }
-
 }

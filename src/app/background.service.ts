@@ -21,14 +21,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Injectable, Renderer2, RendererFactory2, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Injectable, Renderer2, RendererFactory2, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class BackgroundService {
-
   private renderer: Renderer2;
   private body: HTMLElement;
 
@@ -36,16 +35,15 @@ export class BackgroundService {
     private rendererFactory: RendererFactory2,
     @Inject(DOCUMENT) private document: any
   ) {
-
     this.renderer = rendererFactory.createRenderer(null, null);
-    this.body = this.document.getElementsByTagName('body')[0];
+    this.body = this.document.getElementsByTagName("body")[0];
   }
 
   public setBackgroundImage(): void {
-    this.renderer.setAttribute(this.body, 'id', 'bg-img');
+    this.renderer.setAttribute(this.body, "id", "bg-img");
   }
 
   public removeBackgroundImage(): void {
-    this.renderer.removeAttribute(this.body, 'id');
+    this.renderer.removeAttribute(this.body, "id");
   }
 }

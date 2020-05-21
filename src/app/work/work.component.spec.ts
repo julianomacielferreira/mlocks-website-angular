@@ -21,19 +21,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { WorkComponent } from './work.component';
+import { WorkComponent } from "./work.component";
 
-describe('WorkComponent', () => {
+describe("WorkComponent", () => {
   let component: WorkComponent;
   let fixture: ComponentFixture<WorkComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WorkComponent]
-    })
-      .compileComponents();
+      declarations: [WorkComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -42,7 +41,7 @@ describe('WorkComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

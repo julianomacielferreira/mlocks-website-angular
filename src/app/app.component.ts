@@ -21,12 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'mlocks-root',
-  templateUrl: './app.component.html'
+  selector: "mlocks-root",
+  templateUrl: "./app.component.html",
 })
 export class AppComponent {
-  title = 'mlocks-website-angular';
+  title = "mlocks-website-angular";
 }

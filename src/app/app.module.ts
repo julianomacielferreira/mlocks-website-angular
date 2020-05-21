@@ -21,17 +21,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MenuComponent, NavItemDirective } from './menu/menu.component';
-import { AboutComponent } from './about/about.component';
-import { FooterComponent } from './footer/footer.component';
-import { WorkComponent } from './work/work.component';
-import { ContactComponent } from './contact/contact.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { MenuComponent, NavItemDirective } from "./menu/menu.component";
+import { AboutComponent } from "./about/about.component";
+import { FooterComponent } from "./footer/footer.component";
+import { WorkComponent } from "./work/work.component";
+import { ContactComponent } from "./contact/contact.component";
 
 @NgModule({
   declarations: [
@@ -42,13 +42,10 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     FooterComponent,
     WorkComponent,
-    ContactComponent
+    ContactComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

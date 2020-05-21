@@ -21,14 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { BackgroundService } from './background.service';
+import { BackgroundService } from "./background.service";
 
-describe('BackgroundService', () => {
+describe("BackgroundService", () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
-  it('should be created', () => {
+  it("should be created", () => {
     const service: BackgroundService = TestBed.get(BackgroundService);
     expect(service).toBeTruthy();
   });
