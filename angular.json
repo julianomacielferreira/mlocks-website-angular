@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -42,10 +42,8 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -124,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mlocks-website-angular"
+    }
+  },
+  "defaultProject": "mlocks-website-angular",
+  "cli": {
+    "analytics": "5793c3fb-4df4-4a31-a2b2-ae72978ec4aa"
+  }
 }
