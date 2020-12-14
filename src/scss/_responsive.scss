@@ -1,7 +1,7 @@
 // Widescreens
 @include media_query_extra_large {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -82,7 +82,7 @@
     .portrait {
       width: 150px;
       height: 150px;
-      background: url('./../assets/img/portrait_thumb.jpg');
+      background: url("./../assets/img/portrait_thumb.jpg");
     }
   }
 
